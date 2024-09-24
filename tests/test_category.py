@@ -20,15 +20,14 @@ def test_category_init(first_category, second_category):
     assert second_category.product_count == 4
 
 
-def test_category_add_product_property(first_category):
-    assert first_category.add_product == (
-        "Samsung Galaxy S23 Ultra, 180000.0 руб. Остаток: 5 шт."
-        "Iphone 15, 210000.0 руб. Остаток: 8 шт."
-        "Xiaomi Redmi Note 11, 31000.0 руб. Остаток: 14 шт."
-    )
+def test_category_add_product(first_category):
+    assert first_category.products[0].name == "Samsung Galaxy S23 Ultra"
+    assert first_category.products[0].description == "256GB, Серый цвет, 200MP камера"
+    assert first_category.products[0].price == 180000.0
+    assert first_category.products[0].quantity == 5
 
 
-def test_category_add_product_setter(first_category, product):
+def test_category_add_product_count(first_category, product):
     assert len(first_category.products) == 3
-    first_category.add_product = product
+    first_category.add_product(product)
     assert len(first_category.products) == 4
