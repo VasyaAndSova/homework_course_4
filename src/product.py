@@ -11,8 +11,8 @@ class Product:
         self.quantity = quantity
 
     @classmethod
-    def new_product(cls, name, description, price, quantity):
-        return cls(name, description, price, quantity)
+    def new_product(cls, product_dict):
+        return cls(**product_dict)
 
     @property
     def price(self):
