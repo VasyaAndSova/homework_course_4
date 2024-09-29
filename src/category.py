@@ -27,3 +27,6 @@ class Category:
             product_str += f"{str(product)}\n"
         return product_str
 
+    @property
+    def products_in_list(self):
+        return self.__products

@@ -1,5 +1,6 @@
 from src.category import Category
 from src.product import Product
+from src.product_iterator import ProductIterator
 from src.utils import create_objects_from_json, read_json
 
 # if __name__ == "__main__":
@@ -100,6 +101,12 @@ if __name__ == "__main__":
     print(new_product.price)
 
     print(category1)
+
     result1 = product1 + product2
     result2 = product3 + product4
     print(result1 + result2)
+
+    iterator = ProductIterator(category1)
+
+    for product in iterator:
+        print(product)
