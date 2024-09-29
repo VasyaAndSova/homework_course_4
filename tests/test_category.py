@@ -1,4 +1,6 @@
 import pytest
+
+
 def test_category_init(first_category, second_category):
     assert first_category.name == "Смартфоны"
     assert (
@@ -33,12 +35,18 @@ def test_category_add_product_count(first_category, product):
     first_category.add_product(product)
     assert len(first_category.products_in_list) == 4
 
+
 def test_user_product_property(first_category):
-    assert first_category.products == ("Samsung Galaxy S23 Ultra, 180000.0 руб. Остаток: 5 шт.\n"
-                                       "Iphone 15, 210000.0 руб. Остаток: 8 шт.\n"
-                                       "Xiaomi Redmi Note 11, 31000.0 руб. Остаток: 14 шт.\n")
+    assert first_category.products == (
+        "Samsung Galaxy S23 Ultra, 180000.0 руб. Остаток: 5 шт.\n"
+        "Iphone 15, 210000.0 руб. Остаток: 8 шт.\n"
+        "Xiaomi Redmi Note 11, 31000.0 руб. Остаток: 14 шт.\n"
+    )
+
+
 def test_category_str(second_category):
-    assert str(second_category) == 'Телевизоры, количество продуктов: 7 шт.'
+    assert str(second_category) == "Телевизоры, количество продуктов: 7 шт."
+
 
 def test_product_iterator(product_iterator):
     iter(product_iterator)
