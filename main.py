@@ -98,3 +98,8 @@ if __name__ == "__main__":
     print(new_product.price)
     new_product.price = 0
     print(new_product.price)
+
+    print(category1)
+    result1 = product1 + product2
+    result2 = product3 + product4
+    print(result1 + result2)
