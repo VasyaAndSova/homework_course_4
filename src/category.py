@@ -1,4 +1,6 @@
 from src.product import Product
+
+
 class Category:
     name: str
     description: str
@@ -22,7 +24,6 @@ class Category:
             Category.product_count += 1
         else:
             raise TypeError
-
 
     @property
     def products(self):
