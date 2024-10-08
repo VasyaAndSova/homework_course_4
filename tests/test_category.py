@@ -55,3 +55,8 @@ def test_product_iterator(product_iterator):
 
     with pytest.raises(StopIteration):
         next(product_iterator)
+
+
+def test_category_add_product_count_error(first_category, product):
+    with pytest.raises(TypeError):
+        first_category.add_product("Не продукт")
