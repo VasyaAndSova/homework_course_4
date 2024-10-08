@@ -61,7 +61,7 @@ from src.utils import create_objects_from_json, read_json
 #     users_data = create_objects_from_json(raw_data)
 #     print(users_data[0].name)
 #     print(users_data[0].products)
-
+#
 # if __name__ == "__main__":
 #     product1 = Product("Samsung Galaxy S23 Ultra", "256GB, Серый цвет, 200MP камера", 180000.0, 5)
 #     product2 = Product("Iphone 15", "512GB, Gray space", 210000.0, 8)
