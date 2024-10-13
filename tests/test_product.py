@@ -1,3 +1,5 @@
+import pytest
+
 from src.product import Product
 
 
@@ -31,3 +33,6 @@ def test_product_str(product):
 
 def test_product_add(product, product2):
     assert product + product2 == 1761000.0
+
+def test_product_with_zero_quantity(product_with_zero_quantity):
+    assert product_with_zero_quantity == 'Товар с нулевым количеством не может быть добавлен'
