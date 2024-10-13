@@ -61,6 +61,7 @@ def test_category_add_product_count_error(first_category, product):
     with pytest.raises(TypeError):
         first_category.add_product("Не продукт")
 
+
 def test_middle_price(first_category, category_without_product):
     assert first_category.middle_price() == 140333
     assert category_without_product.middle_price() == 0
